@@ -19,13 +19,14 @@ public class DateUtils {
      * @param endingDate
      * @param now
      */
-    static boolean isDateBetween(LocalDate startingDate, LocalDate endingDate, LocalDate now) {
+    public static boolean isDateBetween(LocalDate startingDate, LocalDate endingDate, LocalDate now) {
         LocalDate date = now;
         return date.isAfter(startingDate) && date.isBefore(endingDate);
     }
 
     /**
      * isDateOutside
+     *
      * @param date
      * @param startingDate
      * @param endingDate
