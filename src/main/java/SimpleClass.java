@@ -11,6 +11,8 @@ public class SimpleClass {
      */
     public static void main(String[] args) {
         new SimpleClass().add(1, 2);
+        DateUtils.isNowBetween(LocalDate.MIN, LocalDate.MAX);
+        DateUtils.isDateBetween(LocalDate.of(2019, 1, 1), LocalDate.MIN, LocalDate.MAX);
     }
 
     /**
@@ -23,19 +25,4 @@ public class SimpleClass {
         return firstNumber + b;
     }
 
-    /**
-     * isNowBetween
-     * @param startingDate
-     * @param endingDate
-     * @return
-     */
-    public static boolean isNowBetween(LocalDate startingDate, LocalDate endingDate)
-    {
-        LocalDate now = LocalDate.now();
-        return isDateBetween(startingDate, endingDate, now);
-    }
-
-    private static boolean isDateBetween(LocalDate startingDate, LocalDate endingDate, LocalDate now) {
-        return now.isAfter(startingDate) && now.isBefore(endingDate);
-    }
 }
