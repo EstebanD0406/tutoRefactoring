@@ -9,7 +9,7 @@ public class DateUtils {
      */
     public static boolean isNowBetween(LocalDate startingDate, LocalDate endingDate) {
         LocalDate date = LocalDate.now();
-        return date.isBefore(endingDate) && date.isAfter(startingDate);
+        return date.isAfter(startingDate) && date.isBefore(endingDate);
     }
 
     /**
@@ -22,5 +22,16 @@ public class DateUtils {
     static boolean isDateBetween(LocalDate startingDate, LocalDate endingDate, LocalDate now) {
         LocalDate date = now;
         return date.isAfter(startingDate) && date.isBefore(endingDate);
+    }
+
+    /**
+     * isDateOutside
+     * @param date
+     * @param startingDate
+     * @param endingDate
+     * @return
+     */
+    public static boolean isDateOutside(LocalDate date, LocalDate startingDate, LocalDate endingDate) {
+        return !isDateBetween(date, startingDate, endingDate);
     }
 }
