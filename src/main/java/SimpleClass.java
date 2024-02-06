@@ -12,12 +12,12 @@ public class SimpleClass {
     }
 
     /**
-     * Adds a and b
+     * Adds firstNumber and b
      *
-     * @param a the first number
+     * @param firstNumber the first number
      * @param b the second number
      */
-    public int add(int a, int b) {
-        return a + b;
+    public int add(int firstNumber, int b) {
+        return firstNumber + b;
     }
 }
